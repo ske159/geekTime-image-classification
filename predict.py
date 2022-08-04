@@ -23,3 +23,5 @@ if __name__ == '__main__':
     pred = model(input_tensor)
     # pred = model(input_tensor).argmax()
     print("prediction:", pred)
+    prob = torch.softmax(pred, dim=1)
+    print("prediction prop:", prob)
